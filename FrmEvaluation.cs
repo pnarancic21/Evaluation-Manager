@@ -16,6 +16,8 @@ namespace Evaluation_Manager
     {
         private Student student;
 
+        public Student SelectedStudent { get; private set; }
+
         public FrmEvaluation(Student selectedStudent)
         {
             InitializeComponent();
@@ -44,11 +46,25 @@ namespace Evaluation_Manager
             var currentActivity = cboActivities.SelectedItem as Activity;
             txtActivityDescription.Text = currentActivity.Description;
             txtMinForGrade.Text = currentActivity.MinPointsForGrade + "/" +
-           currentActivity.MaxPoints;
+            currentActivity.MaxPoints;
             txtMinForSignature.Text = currentActivity.MinPointsForSignature + "/" +
-           currentActivity.MaxPoints;
+            currentActivity.MaxPoints;
             numPoints.Minimum = 0;
             numPoints.Maximum = currentActivity.MaxPoints;
+
+            var evaluation = EvaluationRepository.GetEvaluation(SelectedStudent, currentActivity);
+            if (evaluation != null)
+            {
+                txtTeacher.Text = evaluation.Evaluator.ToString();
+                txtEvaluationDate.Text = evaluation.EvaluationDate.ToString();
+                numPoints.Value = evaluation.Points;
+            }
+            else
+            {
+                txtTeacher.Text = FrmLogin.LoggedTeacher.ToString();
+                txtEvaluationDate.Text = "-";
+                numPoints.Value = 0;
+            }
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
