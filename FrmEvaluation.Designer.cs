@@ -105,6 +105,7 @@
             // 
             this.txtMinForSignature.Location = new System.Drawing.Point(265, 47);
             this.txtMinForSignature.Name = "txtMinForSignature";
+            this.txtMinForSignature.ReadOnly = true;
             this.txtMinForSignature.Size = new System.Drawing.Size(100, 20);
             this.txtMinForSignature.TabIndex = 6;
             // 
@@ -112,6 +113,7 @@
             // 
             this.txtMinForGrade.Location = new System.Drawing.Point(383, 47);
             this.txtMinForGrade.Name = "txtMinForGrade";
+            this.txtMinForGrade.ReadOnly = true;
             this.txtMinForGrade.Size = new System.Drawing.Size(96, 20);
             this.txtMinForGrade.TabIndex = 7;
             // 
@@ -119,6 +121,7 @@
             // 
             this.txtTeacher.Location = new System.Drawing.Point(167, 277);
             this.txtTeacher.Name = "txtTeacher";
+            this.txtTeacher.ReadOnly = true;
             this.txtTeacher.Size = new System.Drawing.Size(100, 20);
             this.txtTeacher.TabIndex = 8;
             // 
@@ -126,6 +129,7 @@
             // 
             this.txtEvaluationDate.Location = new System.Drawing.Point(298, 277);
             this.txtEvaluationDate.Name = "txtEvaluationDate";
+            this.txtEvaluationDate.ReadOnly = true;
             this.txtEvaluationDate.Size = new System.Drawing.Size(100, 20);
             this.txtEvaluationDate.TabIndex = 9;
             // 
@@ -133,7 +137,7 @@
             // 
             this.btnSave.Location = new System.Drawing.Point(323, 315);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(75, 29);
             this.btnSave.TabIndex = 10;
             this.btnSave.Text = "Spremi";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -142,7 +146,7 @@
             // 
             this.btnCancel.Location = new System.Drawing.Point(404, 315);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(75, 29);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Odustani";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -156,6 +160,7 @@
             // 
             // cboActivities
             // 
+            this.cboActivities.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboActivities.FormattingEnabled = true;
             this.cboActivities.Location = new System.Drawing.Point(41, 47);
             this.cboActivities.Name = "cboActivities";
@@ -167,6 +172,7 @@
             this.txtActivityDescription.Location = new System.Drawing.Point(41, 91);
             this.txtActivityDescription.Multiline = true;
             this.txtActivityDescription.Name = "txtActivityDescription";
+            this.txtActivityDescription.ReadOnly = true;
             this.txtActivityDescription.Size = new System.Drawing.Size(438, 146);
             this.txtActivityDescription.TabIndex = 14;
             // 
